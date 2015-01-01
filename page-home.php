@@ -63,15 +63,13 @@ get_header(); ?>
         <div class="grid grid-pad">
          <?php if( get_theme_mod( 'active_button' ) == '') : ?>
         	
-			<?php if ( get_theme_mod( 'bigvideo_ctalink_url' ) ) : ?> 
+		<?php if ( get_theme_mod( 'bigvideo_ctalink_url' ) ) : ?> 
         		<div class="col-1-1 home-cta">
              		<a href="<?php echo get_page_link(get_theme_mod('bigvideo_ctalink_url'))?>">
         			<button class="view-more wow fadeInUp" data-wow-delay="0.15s">
-        			<?php $bigvideo_ctalink = get_theme_mod( 'bigvideo_ctalink' ); 
-						if (!empty($bigvideo_ctalink)) { 
-						echo $bigvideo_ctalink; 
-						}
-					?>
+                    <?php if ( get_theme_mod( 'bigvideo_ctalink' ) ) : ?> 
+        			<?php echo get_theme_mod('bigvideo_ctalink')?>
+                    <?php endif; ?>
         			</button>
         			</a>
         		</div><!-- .home-cta -->  
