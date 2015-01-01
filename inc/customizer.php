@@ -415,15 +415,14 @@ function bigvideo_theme_customizer( $wp_customize ) {
 	// Front Page Link
 	$wp_customize->add_setting( 'bigvideo_ctalink', 
 	array( 
-		'default' => 'All Collections',
-	    'sanitize_callback' => 'bigvideo_sanitize_int', 
+	    'default' => 'All Collections',
+	    'sanitize_callback' => 'bigvideo_sanitize_text', 
 	));
 	 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'bigvideo_ctalink', array(
-	'default' => 'All Collections',
-    'label' => __( 'Front Page Call-to-Action Text', 'bigvideo' ),
-    'section' => 'frontpage-custom',
-    'settings' => 'bigvideo_ctalink',
+    	'label' => __( 'Front Page Call-to-Action Text', 'bigvideo' ),
+    	'section' => 'frontpage-custom',
+    	'settings' => 'bigvideo_ctalink',
 	'priority'   => 8 
 	) ) ); 
 	
